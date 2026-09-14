@@ -1,0 +1,2 @@
+"Method","Target","n","GDP","Delta","R","R_aux","Lambda","Coverage","MC_SE_Coverage","CP_Lower","CP_Upper","Mean_Width","MC_SE_Width","Median_Width","Width_Q25","Width_Q75","Failure_Rate","Disconnected_Rate","Unresolved_Eval_Fraction","N"
+"Penalized Wald","sigma",100,1,2,200,400,0.217147240951626,0.967,0.00564898220921256,0.953966018182977,0.97717761665054,1.30810793731041,0.00577250308812534,1.35,1.24375,1.45,0.011,0.01,0.00356122067195211,1000

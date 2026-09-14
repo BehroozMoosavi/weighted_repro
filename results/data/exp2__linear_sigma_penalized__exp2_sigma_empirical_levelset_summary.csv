@@ -1,0 +1,2 @@
+"Method","Type","Axis_1","Axis_2","Sigma_Fixed","Mu_Fixed","Tau_Fixed","Lambda","Levelset_Replications","Grid_N1","Grid_N2","Inclusion_At_Truth","Min_Resolved_Fraction","Mean_Resolved_Fraction"
+"Penalized Wald","Empirical Repro inclusion probability","beta1","beta0",0.5,0.5,1,0.217147240951626,100,41,41,0.98,1,1
