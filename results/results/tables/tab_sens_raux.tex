@@ -1,0 +1,31 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sensitivity to the auxiliary cloud size $R_{\mathrm{aux}}$,
+$1000$ replications per grid point. $R_{\mathrm{aux}}$ enters only the
+direction and never the acceptance rule, so the coverage bound is
+$0.95025$ in every row and the sweep measures width alone.}
+\label{tab:sens-raux}
+\small
+\begin{tabular}{cccccc}
+\toprule
+& \multicolumn{2}{c}{$\mu$ target} & \multicolumn{2}{c}{$\sigma$ target} & \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+$R_{\mathrm{aux}}$ & Coverage & Width & Coverage & Width & Failure $\mu$ / $\sigma$ \\
+\midrule
+50 & 0.979\,(0.005) & 0.582\,(0.003) & 0.976\,(0.005) & 0.668\,(0.003) & 0.005 / 0.008 \\
+100 & 0.979\,(0.005) & 0.582\,(0.003) & 0.976\,(0.005) & 0.669\,(0.004) & 0.006 / 0.005 \\
+200 & 0.978\,(0.005) & 0.582\,(0.003) & 0.977\,(0.005) & 0.670\,(0.004) & 0.010 / 0.006 \\
+400 & 0.981\,(0.004) & 0.582\,(0.003) & 0.976\,(0.005) & 0.669\,(0.004) & 0.005 / 0.007 \\
+800 & 0.983\,(0.004) & 0.581\,(0.003) & 0.974\,(0.005) & 0.669\,(0.004) & 0.005 / 0.005 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{.94\linewidth}\footnotesize
+Over a sixteen-fold range the $\mu$-target width varies by $0.001$ and the
+$\sigma$-target width by $0.002$, in both cases well inside one Monte
+Carlo standard error of the width itself. The direction is therefore
+already stable at $R_{\mathrm{aux}}=50$ in this model, so the value $400$
+used in the main text is conservative rather than necessary.
+\end{minipage}
+\end{table}

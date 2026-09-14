@@ -1,0 +1,41 @@
+\begin{table}[!htbp]
+\centering
+\caption{Experiment 2 with $\sigma$ as the target and
+$(\beta_1,\beta_0,\mathbb{E}X,\sqrt{\operatorname{Var}X})$ profiled out,
+over $1000$ replications. The finite-$R$ coverage bound is $0.95025$.}
+\label{tab:exp2-sigma}
+\small
+\begin{tabular}{lc}
+\toprule
+Quantity & Value \\
+\midrule
+Sample size $n$ & 100 \\
+Privacy ($\mu$-GDP) & 1.0 \\
+Clamping range $\Delta$ & 2.0 \\
+Inference cloud $R$ & 200 \\
+Auxiliary cloud $R_{\mathrm{aux}}$ & 400 \\
+Penalty weight $\lambda_n$ & 0.217 \\[2pt]
+Empirical coverage & $0.967\,(0.006)$ \\
+Finite-$R$ coverage bound & $0.95025$ \\
+Mean interval width & $1.308\,(0.006)$ \\
+Failure rate & 0.011 \\
+Disconnected-set rate & 0.010 \\[2pt]
+Search-audit overturn rate & 0.0065 \\
+Inclusion probability at the truth & 0.980 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{.94\linewidth}\footnotesize
+Monte Carlo standard errors in parentheses. A replication whose accepted
+set on the $\sigma$ grid is empty, or consists of more than one connected
+run, is scored as non-coverage and excluded from the width distribution;
+since the hull of a disconnected set would be a valid and conservative
+alternative, this convention costs coverage rather than inflating it. The
+overturn rate is the fraction of rejected $\sigma$ values that a stronger
+nuisance search reverses, $2$ of $308$ on the audited replications, and is
+the only channel by which the numerical profiling can push coverage below
+its bound. The inclusion probability at the truth involves no search and
+so checks the statistic directly.
+\end{minipage}
+\end{table}

@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sensitivity to the inference cloud size $R$, $1000$ replications
+per grid point. The acceptance rule depends on $R$ through the cut-off
+$a_{R,\alpha}=\lfloor\alpha(R+1)\rfloor+1$, so the attained level moves
+with the design and is given in its own column; coverage must be read
+against the bound in the same row rather than against a constant.}
+\label{tab:sens-R}
+\small
+\begin{tabular}{cccccccc}
+\toprule
+& & & \multicolumn{2}{c}{$\mu$ target} & \multicolumn{2}{c}{$\sigma$ target} & \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+$R$ & $a_{R,\alpha}$ & Bound & Coverage & Width & Coverage & Width & Failure $\mu$ / $\sigma$ \\
+\midrule
+50 & 3 & 0.96078 & 0.984\,(0.004) & 0.642 & 0.986\,(0.004) & 0.739 & 0.003 / 0.002 \\
+100 & 6 & 0.95050 & 0.979\,(0.005) & 0.587 & 0.980\,(0.004) & 0.679 & 0.006 / 0.001 \\
+200 & 11 & 0.95025 & 0.981\,(0.004) & 0.582 & 0.976\,(0.005) & 0.669 & 0.005 / 0.007 \\
+400 & 21 & 0.95012 & 0.975\,(0.005) & 0.578 & 0.974\,(0.005) & 0.662 & 0.012 / 0.011 \\
+800 & 41 & 0.95006 & 0.975\,(0.005) & 0.574 & 0.976\,(0.005) & 0.662 & 0.014 / 0.008 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{.94\linewidth}\footnotesize
+Width falls monotonically in $R$, from $0.642$ to $0.574$ for the $\mu$
+target, a gain of about $11\%$ over a sixteen-fold increase in cost, while
+the failure rate rises from $0.003$ to $0.014$ because a finer rank grid
+places more candidates near the cut-off. Past $R=200$ the bound is flat to
+four decimal places and the width gain is under $1.5\%$ per doubling.
+\end{minipage}
+\end{table}
