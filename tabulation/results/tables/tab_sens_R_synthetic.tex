@@ -1,0 +1,24 @@
+\begin{table}[!htbp]
+\centering
+\caption{Sensitivity to the inference cloud size $R$, $1000$ replications per grid point. The acceptance rule depends on this constant, so the coverage bound moves with it and is given in its own column.}
+\label{tab:sens-R_synthetic}
+\small
+\begin{tabular}{cccccccc}
+\toprule
+& & & \multicolumn{2}{c}{$\mu$ target} & \multicolumn{2}{c}{$\sigma$ target} & \\
+$R$ & $a_{R,\alpha}$ & Bound & Coverage & Width & Coverage & Width & Failure $\mu$ / $\sigma$ \\
+\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+\midrule
+50 & 3 & 0.96078 & 0.984\,(0.004) & 0.642\,(0.005) & 0.986\,(0.004) & 0.739\,(0.005) & 0.003 / 0.002 \\
+100 & 6 & 0.95050 & 0.979\,(0.005) & 0.587\,(0.003) & 0.980\,(0.004) & 0.679\,(0.004) & 0.006 / 0.001 \\
+200 & 11 & 0.95025 & 0.981\,(0.004) & 0.582\,(0.003) & 0.976\,(0.005) & 0.669\,(0.004) & 0.005 / 0.007 \\
+400 & 21 & 0.95012 & 0.975\,(0.005) & 0.578\,(0.003) & 0.974\,(0.005) & 0.662\,(0.003) & 0.012 / 0.011 \\
+800 & 41 & 0.95006 & 0.975\,(0.005) & 0.574\,(0.003) & 0.976\,(0.005) & 0.662\,(0.003) & 0.014 / 0.008 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{.94\linewidth}\footnotesize
+Monte Carlo standard errors in parentheses.
+\end{minipage}
+\end{table}

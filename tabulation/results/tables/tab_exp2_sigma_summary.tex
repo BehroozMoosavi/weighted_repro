@@ -1,0 +1,34 @@
+\begin{table}[!htbp]
+\centering
+\caption{Experiment 2 with $\sigma$ as the target and $(\beta_1,\beta_0,\mathbb{E}X,\sqrt{\operatorname{Var}X})$ profiled out: settings and finite-sample performance.}
+\label{tab:exp2-sigma-summary}
+\small
+\begin{tabular}{ll}
+\toprule
+Quantity & Value \\
+\midrule
+Sample size $n$ & 100 \\
+Privacy ($\mu$-GDP) & 1.00 \\
+Clamping range $\Delta$ & 2.00 \\
+Inference cloud $R$ & 200 \\
+Auxiliary cloud $R_{\mathrm{aux}}$ & 400 \\
+Penalty weight $\lambda_n$ & 0.217147 \\
+Replications & 1000 \\
+Empirical coverage & 0.9670\,(0.0056) \\
+Clopper--Pearson $95\%$ interval & [0.9540, 0.9772] \\
+Finite-$R$ coverage bound & 0.950249 \\
+Mean width & 1.3081\,(0.0058) \\
+Median width & 1.3500 \\
+Width quartiles & [1.2437, 1.4500] \\
+Failure rate & 0.0110 \\
+Disconnected-set rate & 0.0100 \\
+Search-audit overturn rate & 0.0065 \\
+Inclusion probability at the truth & 0.9800 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{minipage}{.94\linewidth}\footnotesize
+Replications whose accepted set on the $\sigma$ grid is empty or has more than one connected run are scored as non-coverage and excluded from the width distribution; both rates are reported so the frequency of that convention is visible. Since the hull of a disconnected set would be a valid and conservative alternative, this convention costs coverage rather than inflating it. The overturn rate is the fraction of rejected $\sigma$ values that a stronger nuisance search reverses, which is the only channel by which the numerical profiling can push coverage below its bound; the inclusion probability at the truth involves no search and so checks the statistic directly.
+\end{minipage}
+\end{table}
