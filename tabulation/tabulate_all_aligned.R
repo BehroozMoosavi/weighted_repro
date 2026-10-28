@@ -2003,11 +2003,11 @@ fig_exp2_comparison <- function(G = read_exp2_grid()) {
     greyfn = grey_reject,
     ticks  = c(0, ALPHA_12, 0.25, 0.50, 0.75, 1),
     key_label = "Rejection probability",
-    file = "fig_exp2_grid.pdf",
+    file = "fig_exp2_comparison.pdf",
     xlab = LAB_N, ylab = LAB_BETA1,
     nrow = 2, ncol = 2, width = 6.9, height = 5.7)
   
-  write_figure_wrapper("fig_exp2_grid.pdf",
+  write_figure_wrapper("fig_exp2_comparison.pdf",
                        sprintf(paste0("Experiment 2. Rejection probability of $H_0:\\beta_1=0$ ",
                                       "at the $%.2f$ level. Rows are the true slope, columns the sample size. ",
                                       "The grey scale runs from $0$ to $1$ and breaks at $%.2f$, so cells at ",
