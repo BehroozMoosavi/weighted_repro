@@ -1,6 +1,18 @@
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.78\linewidth]{results/figures/fig_lambda_sensitivity.pdf}
-\caption{Sensitivity to the penalty weight $\lambda_n$: average interval width for each target, $1000$ replications per grid point. Grid points are drawn at equal spacing because the design grid is geometric. The $\mu$-target width falls from $2.213$ at $\lambda_n=0$ to $0.593$ at the selected value $\lambda_n=0.1$ and then rises slowly, so the penalty is not a technical convenience: with no Mahalanobis term the comparison rests on a single linear projection and the profile objective is nearly flat in the nuisance direction. Coverage clears the Monte-Carlo-adjusted floor $0.9365$ at every grid point, so the figure concerns width alone. This sweep locates endpoints to a coarser bisection tolerance than Table~\ref{tab:exp1-main}, so its absolute widths are not comparable with that table although the ordering in $\lambda_n$ is unaffected.}
+\caption{Sensitivity to the penalty weight: mean interval width for each
+target, over $1000$ replications per grid point. The tested weights are
+displayed as equally spaced categories. This is a sensitivity study, not
+the tuning rule used in the main experiments, which prespecify
+$\lambda_n=1/\log n\approx0.217$ at $n=100$. The $\mu$-target width falls
+from $2.213$ at zero penalty to $0.593$ at $\lambda=0.1$ and $0.587$ at
+$\lambda=0.5$, before increasing at larger weights. The corresponding
+reduction for the $\sigma$ target is smaller. Recorded coverage exceeds
+the Monte-Carlo-adjusted screening floor $0.9365$ throughout; this
+screening criterion is not a coverage guarantee. The simpler search and
+coarser endpoint tolerance differ from those used for
+Table~\ref{tab:exp1-main}, so absolute widths should be compared within
+this sweep rather than with that table.}
 \label{fig:lambda-sensitivity}
 \end{figure}

@@ -575,7 +575,7 @@ for (c_type in clamp_types) {
           CI_std_ends  <- quantile(pmax(0, 2 * ADI_meansd[2] - ADI_meansd_pb[, 2]), probs = c(alpha / 2, 1 - alpha / 2), names = FALSE)
           
           pb_cov_mean   <- as.numeric(CI_mean_ends[1] <= population_mu && CI_mean_ends[2] >= population_mu)
-          pb_cov_sd     <- as.numeric(CI_std_ends[1] <= population_sigma^2 && CI_std_ends[2] >= population_sigma^2)
+          pb_cov_sd     <- as.numeric(CI_std_ends[1] <= population_sigma && CI_std_ends[2] >= population_sigma)
           pb_width_mean <- CI_mean_ends[2] - CI_mean_ends[1]
           pb_width_sd   <- CI_std_ends[2] - CI_std_ends[1]
           

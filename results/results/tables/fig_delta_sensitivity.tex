@@ -1,6 +1,20 @@
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{results/figures/fig_delta_sensitivity.pdf}
-\caption{Sensitivity to the clamping range. The first row is empirical size at $\beta_1^\ast=0$ and the second is power at $\beta_1^\ast=1$; rows of each heat map are the clamping bound and columns the sample size, with $1000$ replications per cell. The grey scale breaks at $0.05$, so in the first row any dark cell is a violation of the nominal level, and the exact finite-$R$ size bound is $0.04975$. A small clamping bound discards information while a large one inflates the privacy noise, whose scale is of order $\Delta^2/n$ in the second-moment coordinates, so power is attainable only in between. Comparison values are those reported by Awan and Wang (2025, Fig.~6), restricted to the cells of our design.}
+\caption{Sensitivity to the clamping range. The first row of panels shows
+empirical size at $\beta_1^\ast=0$ and the second shows power at
+$\beta_1^\ast=1$. Rows within each heat map are clamping bounds and columns
+are sample sizes, with $1000$ replications per cell. Unresolved Penalized
+Wald tests are counted as non-rejections. The grey scale breaks at $0.05$:
+dark cells in the size panels have observed rejection rates above nominal,
+which alone does not establish population size inflation. The bound
+$0.04975$ applies to the exact finite-$R$ rank tests, not to the bootstrap.
+Larger clamping bounds retain more of the latent observations but increase
+the second-moment noise scale as $\Delta^2/n$. On this grid, Penalized Wald
+power is high at the smaller bounds and decreases at larger bounds.
+Comparator values are those reported by \citet[Fig.~6]{awan2024simulation},
+restricted to this design. Alternative rejection probabilities are not
+size-matched power comparisons when the procedures' null rejection rates
+differ.}
 \label{fig:delta-sensitivity}
 \end{figure}

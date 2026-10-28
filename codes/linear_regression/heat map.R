@@ -10,7 +10,7 @@
 # ------------------------------------------------------------------------------
 
 PROJECT_DIR <- path.expand("~/R_Simuls/Linearegression")
-RESULTS_DIR <- file.path(PROJECT_DIR, "results_eff")
+RESULTS_DIR <- file.path(PROJECT_DIR, "results_eff_corrected")
 CSV_FILE    <- file.path(RESULTS_DIR, "Efficient_INT.csv")
 OUTPUT_PNG  <- file.path(RESULTS_DIR, "Efficient_power_heatmap.png")
 OUTPUT_PDF  <- file.path(RESULTS_DIR, "Efficient_power_heatmap.pdf")

@@ -1,9 +1,12 @@
 \begin{table}[!htbp]
 \centering
 \caption{Sensitivity to the auxiliary cloud size $R_{\mathrm{aux}}$,
-$1000$ replications per grid point. $R_{\mathrm{aux}}$ enters only the
-direction and never the acceptance rule, so the coverage bound is
-$0.95025$ in every row and the sweep measures width alone.}
+$1000$ replications per grid point. $R_{\mathrm{aux}}$ affects the estimated
+direction and hence the statistic and individual acceptance decisions, but
+does not change the rank cut-off or the exact coverage lower bound
+$0.95025$. The sweep assesses width and numerical behaviour under this
+common calibration. Failed interval constructions count as non-coverage
+and are excluded from width summaries.}
 \label{tab:sens-raux}
 \small
 \begin{tabular}{cccccc}
@@ -23,9 +26,10 @@ $R_{\mathrm{aux}}$ & Coverage & Width & Coverage & Width & Failure $\mu$ / $\sig
 \vspace{2pt}
 \begin{minipage}{.94\linewidth}\footnotesize
 Over a sixteen-fold range the $\mu$-target width varies by $0.001$ and the
-$\sigma$-target width by $0.002$, in both cases well inside one Monte
-Carlo standard error of the width itself. The direction is therefore
-already stable at $R_{\mathrm{aux}}=50$ in this model, so the value $400$
-used in the main text is conservative rather than necessary.
+$\sigma$-target width by $0.002$, both small relative to the reported
+single-estimate Monte Carlo standard errors. The observed widths are
+therefore insensitive to auxiliary-cloud size at this resolution in this
+model; this comparison does not establish consistency or stability of
+the estimated direction itself.
 \end{minipage}
 \end{table}

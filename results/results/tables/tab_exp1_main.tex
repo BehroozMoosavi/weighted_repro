@@ -1,16 +1,18 @@
 \begin{table}[!htbp]
 \centering
 \caption{Experiment 1, clamped location-scale normal. Empirical coverage
-and average width of the nominal $95\%$ intervals, average area of the
-joint region, and the width of each targeted interval relative to the
-Mahalanobis interval for the same parameter, over $1000$ replications at
-$n=100$. Monte Carlo standard errors in parentheses. Joint coverage is
-evaluated at the true parameter and so involves no nuisance optimisation,
-which makes it a direct check on the statistic; its reference value is
-the finite-$R$ bound $0.95025$, with a Monte Carlo standard error of
-$0.0069$.}
+and mean width of nominal $95\%$ intervals, mean joint-region area, and
+the percentage reduction in each targeted interval's width relative to
+Mahalanobis, over $1000$ replications at $n=100$. Monte Carlo standard
+errors are in parentheses. For the repro methods, joint coverage
+evaluates the statistic at the true parameter without nuisance
+profiling; the exact rank rule has lower bound $0.95025$. PB--ADI instead
+has nominal coverage $0.95$. The Monte Carlo standard error of a coverage
+estimate near $0.95$ is about $0.0069$.}
 \label{tab:exp1-main}
 \footnotesize
+\begingroup
+\setlength{\tabcolsep}{5pt}
 \begin{tabular}{llccccc}
 \toprule
 & & \multicolumn{2}{c}{Marginal} & & & \\
@@ -23,18 +25,19 @@ Method & & $\mu$ & $\sigma$ & Joint & Area & Reduction \\
  & Width & 0.504\,(0.003) & 1.730\,(0.009) & & 0.657\,(0.007) & $15.9\,\%$ \\[2pt]
 \multirow{2}{*}{Penalized Wald ($\sigma$)} & Coverage & 1.000\,(0.000) & 0.964\,(0.006) & 0.956\,(0.006) & & \\
  & Width & 1.076\,(0.005) & 0.614\,(0.003) & & 0.503\,(0.005) & $19.0\,\%$ \\[2pt]
-\multirow{2}{*}{\textsc{pb-adi}} & Coverage & 0.959\,(0.006) & 0.960\,(0.006) & 0.967\,(0.006) & & \\
+\multirow{2}{*}{PB--ADI} & Coverage & 0.959\,(0.006) & 0.960\,(0.006) & 0.967\,(0.006) & & \\
  & Width & 0.463\,(0.003) & 0.576\,(0.003) & & 0.338\,(0.004) &  \\
 \bottomrule
 \end{tabular}
+\endgroup
 
 \vspace{2pt}
 \begin{minipage}{.94\linewidth}\footnotesize
-The two Penalized Wald rows are separate runs, each orthogonalised against
-the other coordinate, so the off-target entry records the price of that
-orthogonalisation and the pair does not carry simultaneous coverage. Area
-is reported for completeness but is not the relevant criterion for a
-targeted statistic. Numerical failures were zero for every method, and no
-interval was returned at a search-box boundary in any replication.
+The two Penalized Wald rows use different target-specific statistics;
+off-target entries describe their projections onto the other coordinate.
+Combining the two targeted marginal intervals does not provide a
+$95\%$ simultaneous-coverage guarantee. Area is reported for completeness
+but is not the efficiency criterion for a scalar target. Every replication
+returned an interval.
 \end{minipage}
 \end{table}

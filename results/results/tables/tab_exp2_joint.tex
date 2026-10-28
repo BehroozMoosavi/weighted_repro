@@ -1,0 +1,37 @@
+% Table: joint inference on (beta1, beta0), private linear regression.
+% Included in the linear-regression subsection of the main paper.
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{@{}r ccc ccc@{}}
+\toprule
+& \multicolumn{3}{c}{Joint coverage} & \multicolumn{3}{c}{Mean area} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+\(n\) & MH & PW & PB--ADI & MH & PW & PB--ADI \\
+\midrule
+100  & 0.994 & 0.966 & 0.971 & 0.9612  & 0.8588  & 0.6539  \\
+200  & 0.991 & 0.956 & 0.956 & 0.3025  & 0.2241  & 0.1851  \\
+500  & 0.997 & 0.967 & 0.934 & 0.06651 & 0.04420 & 0.04044 \\
+1000 & 0.987 & 0.953 & 0.938 & 0.02228 & 0.01476 & 0.01370 \\
+\midrule
+Theory & 0.996 & \(\to0.950\) & \(\to0.950\)
+       & \multicolumn{3}{c}{MH/PW \(\to1.848\), PW/PB--ADI \(\to1\)} \\
+\bottomrule
+\end{tabular}
+\caption{Joint inference on \((\beta_1,\beta_0)\) in private linear regression,
+\(1000\) replications per cell, \(R=200\), \(R_{\mathrm{aux}}=400\),
+\(\alpha=0.05\), \(\lambda_n=1/\log n\). MH is the projection of the
+five-dimensional Mahalanobis region; PW is the two-dimensional Penalized Wald
+region; PB--ADI is the bootstrap-calibrated ellipse with \(R_{\mathrm{ADI}}=50\)
+and \(B=200\). Repro areas use the midpoint grid rule of
+Appendix~\ref{app:impl-exp2}. The theory row gives ideal first-order
+benchmarks under a Gaussian local limit, the stated regularity and tuning
+conditions, growing simulation budgets and exact nuisance profiling; it
+does not assert those limits for the fixed budgets and finite candidate
+sets used here. The bound \(0.95025\) applies to the exact rank rules at
+\(R=200\); coverage of the numerical regions is assessed empirically.
+No unresolved replication or grid cell was recorded. PB--ADI summaries
+exclude replications whose fit failed or that had fewer than \(160\)
+successful bootstrap refits.}
+\label{tab:exp2-joint}
+\end{table}

@@ -1,6 +1,19 @@
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.95\linewidth]{results/figures/fig_boundary_joint.pdf}
-\caption{Joint coverage of the nominal $95\%$ region for $(\mu,\sigma)$ as the true mean approaches the upper clamp $U=3$, at which point the clamp binds on half the sample. Rows are $\mu^\ast$ and columns the privacy budget; the grey scale breaks at $0.95$, so light cells are under-coverage, and the finite-$R$ bound is $0.95025$. Each cell uses $100$ replications, so the Monte Carlo standard error near $0.95$ is $0.022$ and differences below about $0.04$ should not be read as real.}
+\caption{Joint coverage for $(\mu,\sigma)$ as the true mean approaches the
+upper clamp $U=3$, where half the latent distribution lies above the upper
+bound. Rows are $\mu^\ast$ and columns are the GDP parameter
+$\mu_{\mathrm{GDP}}$ per coordinate; the released pair satisfies
+$\sqrt{2}\mu_{\mathrm{GDP}}$-GDP. Mahalanobis and Penalized Wald approximate
+nominal $95\%$ joint regions, with lower bound $0.95025$ for the exact rank
+rules. PB--ADI instead uses a rectangle of two nominal $95\%$ marginal
+intervals; valid marginal calibration would imply a joint lower bound of
+$0.90$, not an exact joint level. The grey scale breaks at $0.95$, so light
+cells indicate observed coverage below that reference, not by themselves
+population undercoverage. Each cell has $100$ attempted replications:
+failed repro constructions count as non-coverage, whereas failed PB--ADI
+fits are excluded from its averages. The Monte Carlo standard error near
+coverage $0.95$ is about $0.022$ when all $100$ replications contribute.}
 \label{fig:boundary-joint}
 \end{figure}

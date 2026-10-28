@@ -1,6 +1,19 @@
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.78\linewidth]{results/figures/fig_boundary_soft.pdf}
-\caption{Joint coverage at $\mu^\ast=3$ under hard (solid) and soft (dashed) clamping. Because the smooth map sends the data into $(L,U)$ the replace-one sensitivities are unchanged, so the two regimes carry exactly the same privacy cost and the only difference between them is the differentiability of the clamp; the clamp type is applied to the release, the acceptance region, the point estimator and the resampler alike. The dotted line is the finite-$R$ bound $0.95025$. Each cell uses $100$ replications, so the Monte Carlo standard error near $0.95$ is $0.022$.}
+\caption{Joint coverage at $\mu^\ast=3$ under hard (solid) and soft (dashed)
+clamping. The horizontal axis is the GDP parameter $\mu_{\mathrm{GDP}}$
+per coordinate; the released pair satisfies
+$\sqrt{2}\mu_{\mathrm{GDP}}$-GDP. Both maps use the same sensitivity bounds
+and privacy-noise calibration, but smoothing changes the information
+retained as well as differentiability, so this comparison does not isolate
+numerical derivative error. Each map is used consistently in the release,
+repro calculation, indirect estimator and bootstrap. The dotted line is
+the exact repro coverage bound $0.95025$; it is not a joint-coverage bound
+for the PB--ADI rectangle of two nominal $95\%$ marginal intervals. Each
+cell has $100$ attempted replications. Failed repro constructions count as
+non-coverage, whereas PB--ADI averages exclude failed fits. The Monte Carlo
+standard error near $0.95$ is about $0.022$ when all $100$ replications
+contribute.}
 \label{fig:boundary-soft}
 \end{figure}

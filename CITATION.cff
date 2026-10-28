@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "weighted_repro: code and results for Finite-Sample Valid and Asymptotically Efficient Simulation-Based Inference"
+authors:
+  - family-names: "Moosavi Ramezanzadeh"
+    given-names: "Behrooz"
+    affiliation: "University of Pittsburgh"
+  - family-names: "Awan"
+    given-names: "Jordan"
+    affiliation: "University of Pittsburgh"
+repository-code: "https://github.com/BehroozMoosavi/weighted_repro"
+license: GPL-3.0
+version: "aos-submission-v1"
+preferred-citation:
+  type: article
+  title: "Finite-Sample Valid and Asymptotically Efficient Simulation-Based Inference"
+  authors:
+    - family-names: "Moosavi Ramezanzadeh"
+      given-names: "Behrooz"
+    - family-names: "Awan"
+      given-names: "Jordan"
+  notes: "Manuscript submitted to the Annals of Statistics."
