@@ -78,6 +78,10 @@ The confidence sets in the paper are defined through a supremum over the nuisanc
 
 The paper discloses each of these points.
 
+## Table captions
+
+The LaTeX fragments in `results/` carry the captions of the submitted manuscript, which were revised after the tables were generated. Rerunning the tabulation scripts reproduces the same numbers with the earlier caption text.
+
 ## License and citation
 
 The code is released under the GPL-3.0 license (see `LICENSE`). If you use it, please cite the paper; `CITATION.cff` gives the citation metadata.

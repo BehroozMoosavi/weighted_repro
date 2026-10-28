@@ -906,7 +906,7 @@ LAB_CIW    <- "CI width"
 
 ## (F1) method labels: the name only, no attribution
 M_PW  <- "Penalized Wald"
-M_RP  <- "Repro"
+M_RP  <- "Mahalanobis depth"
 M_ADI <- "PB-ADI"
 M_NV  <- "PB-naive"
 M_MAH <- "Mahalanobis"
