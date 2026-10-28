@@ -26,15 +26,16 @@ The release tagged **`aos-submission-v1`** corresponds to the submitted manuscri
 | `exp1_R_point_cloud_sensitivity.R` | `codes/sensitivity_analysis/exp1_normal_sensitivity/exp1_R_point_cloud_sensitivity.R` | Sensitivity to the inference-cloud size |
 | `exp1_R_aux_sensitivity.R` | `codes/sensitivity_analysis/exp1_normal_sensitivity/exp1_R_aux_sensitivity.R` | Sensitivity to the auxiliary-cloud size |
 | `exp2_linearreg_eff.R` | `codes/linear_regression/exp2_linearreg_eff.R` | Figure 2: Experiment 2, test of a regression slope (simulation) |
-| `heat map.R` | `codes/linear_regression/heat map.R` | Figure 2 (plotting only) |
+| `heat map.R` | `codes/linear_regression/heat map.R` | Stand-alone heat map of the Penalized Wald results (Figure 2 itself is drawn by `tabulate_all_aligned.R`) |
 | `two_target_dim_mh_pw_pbadi.R` | `codes/linear_regression/two_target_dim_mh_pw_pbadi.R` | Table 2: joint target in private linear regression |
 | `clamp_sensitivity.R` | `codes/sensitivity_analysis/exp2_linear_regression_sensitivity/clamp_sensitivity.R` | Sensitivity to the clamping range (simulation) |
-| `clamp_plots_only.R` | `codes/sensitivity_analysis/exp2_linear_regression_sensitivity/clamp_plots_only.R` | Sensitivity to the clamping range (plotting only) |
+| `clamp_plots_only.R` | `codes/sensitivity_analysis/exp2_linear_regression_sensitivity/clamp_plots_only.R` | Stand-alone plots of the clamping study (the paper figure is drawn by `tabulate_all_aligned.R`) |
 | `exp2_sigma_penalized_efficient.R` | `codes/linear_regression/exp2_sigma_penalized_efficient.R` | Scale target in private linear regression |
 | `eff.R` | `codes/objective_perturbation/eff.R` | Figure 3: Experiment 3, logistic regression by objective perturbation (simulation) |
-| `heatmap.R` | `codes/objective_perturbation/heatmap.R` | Figure 3 (plotting only) |
+| `heatmap.R` | `codes/objective_perturbation/heatmap.R` | Stand-alone heat map of the Penalized Wald results (Figure 3 itself is drawn by `tabulate_all_aligned.R`) |
 | `failure_v1.R` | `codes/pb_ADI_failure/failure_v1.R` | Boundary study, hard clamp |
 | `failure_v2.R` | `codes/pb_ADI_failure/failure_v2.R` | Boundary study, hard and soft clamp at the boundary |
+| `tabulate_all_aligned.R` | `tabulation/tabulate_all_aligned.R` | LaTeX tables and the comparison figures (Figures 2 and 3 and the clamping-range figure), from the archived results and the published comparator values |
 
 Plotting and tabulation scripts read the saved results and do not rerun any simulation.
 
@@ -55,7 +56,7 @@ All experiments are written in R. The R version and the versions of every packag
    cd codes/location_scale_normal
    Rscript exp1_coverage.R
    ```
-3. Run the matching plotting or tabulation script to rebuild the figure or table.
+3. Rebuild the tables and figures from the archived results with `bash tabulation/run_tabulation.sh <output folder>`. The tabulation script expects the folder layout of the original project, and `tabulation/input_map.tsv` maps each of its inputs to the archived copy in `results/`.
 
 Every replication is seeded explicitly, and within a replication the observed release, the inference cloud and the auxiliary cloud are drawn as consecutive blocks of one random-number stream. Results are therefore reproducible regardless of how many workers are used. The seed of each study is given in the Implementation Details appendix of the paper.
 

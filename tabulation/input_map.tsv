@@ -1,0 +1,7 @@
+# expected path (relative to the original project root)	archived file in this repository
+codes/exp1_location_scale_normal/results_coverage/coverage_all_results.csv	results/data/coverage_all_results.csv
+codes/exp2_linear_regression/linear_sigma_penalized_efficient/Figure_Exp2_sigma_empirical_geometry.pdf	results/results/figures/Figure_Exp2_sigma_empirical_geometry.pdf
+codes/exp2_linear_regression/results_eff/Efficient_INT.csv	results/data/Efficient_INT.csv
+codes/exp3_objective_perturbation/results/heatmap_data.csv	results/data/heatmap_data.csv
+codes/PB_ADI_Failure/results_grid_study_v1/master_grid_summary.csv	results/data/master_grid_summary.csv
+codes/PB_ADI_Failure/results_softclamp_study_v2/master_softclamp_summary.csv	results/data/master_softclamp_summary.csv
